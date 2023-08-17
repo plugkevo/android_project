@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidproject.R
@@ -37,7 +36,7 @@ private var _binding: FragmentServicesBinding? = null
       // Set click listener for the button
       openActivityButton.setOnClickListener {
           // Create an Intent to start the new activity
-          val intent = Intent(requireContext(), shipping::class.java)
+          val intent = Intent(requireContext(), add_to_cart::class.java)
           startActivity(intent)
       }
 

@@ -16,7 +16,7 @@
         android:padding="5dp">
 
         <ImageView
-            android:id="@+id/imageview"
+            android:id="@+id/disgoodimage"
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.06" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/disgoodsname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -35,12 +35,22 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageview"
+            app:layout_constraintStart_toEndOf="@+id/disgoodimage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.326" />
 
+        <EditText
+            android:id="@+id/etquantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/add_to_cart"
+            app:layout_constraintStart_toEndOf="@+id/disgoodsname"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
-            android:id="@+id/button"
+            android:id="@+id/add_to_cart"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -49,7 +59,7 @@
             android:textAlignment="viewEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.979"
-            app:layout_constraintStart_toEndOf="@+id/textView"
+
             app:layout_constraintTop_toTopOf="parent" />
 
 

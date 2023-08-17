@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
+            android:name=".ui.services.view_goods"
+            android:exported="false" />
+        <activity
+            android:name=".ui.services.add_to_cart"
+            android:exported="false" />
+        <activity
             android:name=".ui.admin_panel.insertion_admin"
             android:exported="false" />
         <activity
