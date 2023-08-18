@@ -34,14 +34,22 @@ class view_goods : AppCompatActivity() {
             displaygoodname.text = intent.getStringExtra("goodsname")
             displaycharge.text = intent.getStringExtra("gdscharge")
 
-            val goodsImage = intent.getStringExtra("goodimage")
-            // Load image using Picasso
-            if (!goodsImage.isNullOrEmpty()) {
-                Picasso.get().load(goodsImage).into(displayimage)
-            }
+            val imageUrl = intent.getStringExtra("goodimage") // Retrieve the image URL from the intent
+
+            // Load the image using Picasso
+            Picasso.get()
+                .load(imageUrl)
+                .into(displayimage)
+
+
 
 
 
 
         }
-    }
+
+
+
+
+        }
+

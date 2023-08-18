@@ -3,9 +3,11 @@ package com.example.androidproject
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidproject.ui.services.ItemsViewModel
+import com.squareup.picasso.Picasso
 
 class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
     RecyclerView.Adapter<goodsadapter.ViewHolder>(){
@@ -27,13 +29,12 @@ class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = goodslist[position]
+        holder.apply {
+
         holder.disgoodname.text = currentEmp.goodsname
+        Picasso.get().load(currentEmp.goodimage).into(disgooodimage)
 
-
-
-
-
-
+    }
     }
 
     override fun getItemCount(): Int {
@@ -43,9 +44,7 @@ class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
         val disgoodname : TextView = itemView.findViewById(R.id.disgoodsname)
-
-
-
+        val disgooodimage: ImageView = itemView.findViewById(R.id.disgoodimage) // Initialize the ImageView
 
 
         init {
@@ -53,7 +52,6 @@ class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
                 clickListener.onItemClick(adapterPosition)
             }
         }
-
     }
-
 }
+
