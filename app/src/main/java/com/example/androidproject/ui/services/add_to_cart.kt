@@ -50,9 +50,13 @@ class add_to_cart : AppCompatActivity() {
                     for (empSnap in snapshot.children){
                         val goodsData = empSnap.getValue(ItemsViewModel::class.java)
                         goodslist.add(goodsData!!)
+
                     }
-                    val mAdapter = goodsadapter(goodslist)
+
+                    // Inside your add_to_cart activity
+                    val mAdapter = goodsadapter(goodslist) // Pass the context (this) to the adapter constructor
                     gdsRecyclerView.adapter = mAdapter
+
 
                     //when an item is clicked the all the employee data is displayed in a different page
                     mAdapter.setOnItemClickListener(object : goodsadapter.onItemClickListener{

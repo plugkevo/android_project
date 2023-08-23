@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.androidproject.ui.services.ItemsViewModel
-import com.squareup.picasso.Picasso
 
-class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
+class goodsadapter(val goodslist: ArrayList<ItemsViewModel>) :
     RecyclerView.Adapter<goodsadapter.ViewHolder>(){
 
     private lateinit var mListener: onItemClickListener
@@ -29,13 +29,13 @@ class goodsadapter(private val goodslist: ArrayList<ItemsViewModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = goodslist[position]
-        holder.apply {
 
         holder.disgoodname.text = currentEmp.goodsname
-        Picasso.get().load(currentEmp.goodimage).into(disgooodimage)
+        Glide.with(holder.itemView.context) // Use the context from the ViewHolder
+            .load(currentEmp.goodimage)
+            .into(holder.disgooodimage)
+    }
 
-    }
-    }
 
     override fun getItemCount(): Int {
         return goodslist.size
