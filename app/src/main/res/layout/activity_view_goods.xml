@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="48dp"
-        android:text="TextView"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +31,7 @@
         android:layout_height="50dp"
         android:layout_width="match_parent"
         android:id="@+id/displaycharge"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/displaygoodname" />
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="Name"
+        android:hint="quantity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/displaycharge" />

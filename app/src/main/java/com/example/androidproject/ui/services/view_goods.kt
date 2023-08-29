@@ -42,14 +42,7 @@ class view_goods : AppCompatActivity() {
                 .into(displayimage)
 
 
-
-
-
-
         }
-
-
-
 
         }
 

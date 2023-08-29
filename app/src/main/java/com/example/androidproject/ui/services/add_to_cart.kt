@@ -71,7 +71,6 @@ class add_to_cart : AppCompatActivity() {
                             intent.putExtra("goodimage", goodslist[position].goodimage)
                             startActivity(intent)
                         }
-
                     })
 
                     gdsRecyclerView.visibility = View.VISIBLE
