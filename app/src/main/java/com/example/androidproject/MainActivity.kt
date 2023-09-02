@@ -37,9 +37,11 @@ private lateinit var binding: ActivityMainBinding
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home, R.id.nav_services, R.id.nav_admin_panel), drawerLayout)
+            R.id.nav_home, R.id.nav_services, R.id.contact_us, R.id.nav_admin_panel), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //Bottom navigation view
 
 
     }
