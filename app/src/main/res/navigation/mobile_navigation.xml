@@ -32,4 +32,9 @@
         android:name="com.example.androidproject.ui.services.contact_us"
         android:label="fragment_contact_us"
         tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/test"
+        android:name="com.example.androidproject.test"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
 </navigation>
